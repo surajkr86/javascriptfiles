@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet"  href="bootstrap.css"  type="text/css" />
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="bootstrap.js"></script>
+	<style type="text/css">
+		.container{
+			height: 2000px;
+			
+		}
+		.one{display: none;}
+		.two{display: none;}
+		.three{display: none;}
+		.jumbotron {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #cc5350;
+    color:#fff;
+    z-index: 1000;
+    height:100%;
+    overflow: hidden;
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    transition: height 0.3s;
+    text-align:center;
+    line-height:160px;
+
+}
+	</style>
+	<script>
+		jQuery(document).ready(function() {
+			$(this).scroll(function(){
+				var setHeight = $(window).scrollTop();
+				if(setHeight>=400){
+					$('.one').show('slow', function() {
+					$(this).fadeIn();
+					
+					$(this).css({
+						width: screen.width,
+						height: screen.height
+					});
+					
+					});
+					$('.two').hide()
+					$('.three').hide();
+
+
+				}if (setHeight>=600) {
+					$('.one').hide()
+					$('.two').show('slow', function() {
+					$(this).fadeIn();
+					
+					});
+					$('.three').hide();
+				}
+				if(setHeight>=1000){
+					$('.one').hide()
+					$('.two').hide()
+					$('.three').show('slow', function() {
+					$(this).fadeIn().css('background', '#08f');;
+					
+					});;
+
+				}
+			});
+
+
+		});
+	</script>
+
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<ul class="nav nav-pills">
+				<li role="presentation" class="active"><a href="#">Home</a></li>
+				<li role="presentation"><a href="#">Profile</a></li>
+				<li role="presentation"><a href="#">Messages</a></li>
+				</ul>
+				<h1>Welcome to jquery tutorial</h1>
+			</div>
+			<div class="jumbotron one">
+      <h1>Hello, world! One</h1>
+      <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+    </div>
+
+
+    <div class="jumbotron two">
+      <h1>Hello, world! Two</h1>
+      <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+    </div>
+
+    <div class="jumbotron three">
+      <h1>Hello, world! Three</h1>
+      <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+    </div>
+		</div>
+	</div>
+	
+
+
+ 	
+
+
+</body>
+</html>

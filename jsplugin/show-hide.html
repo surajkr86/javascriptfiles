@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="bootstrap.css">
+	<script src="jquery.js"></script>
+	<script src='bootstrap.js'></script>
+	
+	
+</head>
+
+<body>
+<div class="container">
+	<div class="row">
+		<input type="text" name="" value="" id="" placeholder="Enter your name" class="input">
+		<input type="text" name="" value="" id="" placeholder="Enter your name" class="input">
+		<input type="text" name="" value="" id="" placeholder="Enter your name" class="input">
+		<input type="text" name="" value="" id="" placeholder="Enter your name" class="input">
+		<button class="btn btn-default">Button</button>
+		<button class="btn btn-danger">Button</button>
+		<button class="btn btn-primary">Button</button>
+		<button class="btn btn-info">Button</button>
+		<input type="checkbox" name="" id="">
+		<input type="radio" name="" id="01">
+		<input type="radio" name="" id="02">
+
+		<span></span>
+		<h2></h2>
+		<h3></h3>
+	</div>
+</div>
+
+<script>
+	$(function() {
+		$(".input").keyup(function() {
+		 var value = $("input[type='text']").val();
+		 $('span').text(value)
+		});
+		 $("input[type='checkbox']").live(function() {
+		 	var val = $(this).val()
+		 	$('h2').text(val)
+		 	
+		 });
+		 $("input[type='radio']").change(function() {
+		 	var val = $(this).val()
+		 	$('h3').text(val)
+		 	
+		 });
+
+	});
+</script>
+
+
+</body>
+</html>
